@@ -1,3 +1,5 @@
+using Salvador.Logger;
+
 namespace Salvador.UI
 {
     public class Program
@@ -13,6 +15,14 @@ namespace Salvador.UI
             service.AddControllersWithViews().AddRazorRuntimeCompilation();
 
             var app = builder.Build();
+            var configuration = app.Configuration;
+
+            using (var scope = app.Services.CreateScope())
+            {
+                var logger = scope.ServiceProvider.GetRequiredService<ILoggerFactory>();
+
+                logger.AddLog4Net();
+            }
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
