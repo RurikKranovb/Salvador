@@ -1,11 +1,25 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35818.85 d17.13
+VisualStudioVersion = 17.13.35818.85
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{36D591C7-65C7-A0D1-1CBC-10CDE441BDC8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Salvador.UI", "UI\Salvador.UI\Salvador.UI.csproj", "{F704A61B-93A0-474F-BDE5-18C9F97A1E4A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{809B35F7-083E-4B58-A64C-D4EE7B446D14}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Service", "Service", "{97327C52-F95E-4C41-A8B0-49F94CB41362}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{F0873423-D7B0-409D-811C-677B7E75380C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Salvador.DAL", "Service\Salvador.DAL\Salvador.DAL.csproj", "{90A2AA72-70B5-48ED-A250-9FC21101E3D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Salvador.Domain", "Common\Salvador.Domain\Salvador.Domain.csproj", "{46171C8E-6315-4AC9-8691-B9D145D7CB73}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Salvador.Interface", "Service\Salvador.Interface\Salvador.Interface.csproj", "{62D0D891-9AB0-442A-B74C-6AD4EB0C292C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Salvador.Logger", "Common\Salvador.Logger\Salvador.Logger.csproj", "{AB1795AE-800D-4DFA-A24C-79403992ADBD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,12 +31,32 @@ Global
 		{F704A61B-93A0-474F-BDE5-18C9F97A1E4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F704A61B-93A0-474F-BDE5-18C9F97A1E4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F704A61B-93A0-474F-BDE5-18C9F97A1E4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90A2AA72-70B5-48ED-A250-9FC21101E3D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90A2AA72-70B5-48ED-A250-9FC21101E3D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90A2AA72-70B5-48ED-A250-9FC21101E3D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90A2AA72-70B5-48ED-A250-9FC21101E3D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46171C8E-6315-4AC9-8691-B9D145D7CB73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46171C8E-6315-4AC9-8691-B9D145D7CB73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46171C8E-6315-4AC9-8691-B9D145D7CB73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46171C8E-6315-4AC9-8691-B9D145D7CB73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62D0D891-9AB0-442A-B74C-6AD4EB0C292C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62D0D891-9AB0-442A-B74C-6AD4EB0C292C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62D0D891-9AB0-442A-B74C-6AD4EB0C292C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62D0D891-9AB0-442A-B74C-6AD4EB0C292C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB1795AE-800D-4DFA-A24C-79403992ADBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB1795AE-800D-4DFA-A24C-79403992ADBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB1795AE-800D-4DFA-A24C-79403992ADBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB1795AE-800D-4DFA-A24C-79403992ADBD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{F704A61B-93A0-474F-BDE5-18C9F97A1E4A} = {36D591C7-65C7-A0D1-1CBC-10CDE441BDC8}
+		{90A2AA72-70B5-48ED-A250-9FC21101E3D8} = {97327C52-F95E-4C41-A8B0-49F94CB41362}
+		{46171C8E-6315-4AC9-8691-B9D145D7CB73} = {809B35F7-083E-4B58-A64C-D4EE7B446D14}
+		{62D0D891-9AB0-442A-B74C-6AD4EB0C292C} = {97327C52-F95E-4C41-A8B0-49F94CB41362}
+		{AB1795AE-800D-4DFA-A24C-79403992ADBD} = {809B35F7-083E-4B58-A64C-D4EE7B446D14}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7DDAE196-4825-4E53-BCE4-04B167739518}
