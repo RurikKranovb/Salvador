@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Common\Salvador.Domain\Salvador.Domain.csproj" />
+    <ProjectReference Include="..\Salvador.Interface\Salvador.Interface.csproj" />
   </ItemGroup>
 
 </Project>
