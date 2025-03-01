@@ -3,6 +3,7 @@ using Salvador.DAL.Context;
 using Salvador.Interface.Services;
 using Salvador.Logger;
 using Salvador.Service;
+using Salvador.Service.Data;
 
 namespace Salvador.UI
 {
@@ -29,6 +30,7 @@ namespace Salvador.UI
             #endregion
 
             service.AddScoped<IRecordService, RecordService>();
+            service.AddTransient<DataBaseInitializer>();
 
             var app = builder.Build();
             var configuration = app.Configuration;
@@ -38,6 +40,10 @@ namespace Salvador.UI
                 var logger = scope.ServiceProvider.GetRequiredService<ILoggerFactory>();
 
                 logger.AddLog4Net();
+
+                var dbInitializer = scope.ServiceProvider.GetRequiredService<DataBaseInitializer>();
+
+                dbInitializer.Initializer();
             }
 
             // Configure the HTTP request pipeline.
