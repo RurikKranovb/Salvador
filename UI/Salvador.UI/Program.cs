@@ -1,3 +1,5 @@
+using Microsoft.EntityFrameworkCore;
+using Salvador.DAL.Context;
 using Salvador.Interface.Services;
 using Salvador.Logger;
 using Salvador.Service;
@@ -15,6 +17,16 @@ namespace Salvador.UI
             service.AddRazorPages();
 
             service.AddControllersWithViews().AddRazorRuntimeCompilation();
+
+            #region DataBase
+
+            var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+
+            service.AddDbContext<DataBase>(opt =>
+                opt.UseSqlServer(connectionString));
+
+            service.AddTransient<DataBase>(); 
+            #endregion
 
             service.AddScoped<IRecordService, RecordService>();
 
