@@ -1,4 +1,6 @@
+using Salvador.Interface.Services;
 using Salvador.Logger;
+using Salvador.Service;
 
 namespace Salvador.UI
 {
@@ -13,6 +15,8 @@ namespace Salvador.UI
             service.AddRazorPages();
 
             service.AddControllersWithViews().AddRazorRuntimeCompilation();
+
+            service.AddScoped<IRecordService, RecordService>();
 
             var app = builder.Build();
             var configuration = app.Configuration;

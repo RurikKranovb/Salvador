@@ -18,6 +18,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Common\Salvador.Logger\Salvador.Logger.csproj" />
+    <ProjectReference Include="..\..\Service\Salvador.Interface\Salvador.Interface.csproj" />
+    <ProjectReference Include="..\..\Service\Salvador.Service\Salvador.Service.csproj" />
   </ItemGroup>
 
   <ItemGroup>

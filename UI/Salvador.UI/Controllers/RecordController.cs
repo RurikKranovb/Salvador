@@ -1,12 +1,25 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Salvador.Interface.Services;
 
 namespace Salvador.UI.Controllers
 {
-    public class RecordController : Controller
+    public class RecordController : ControllerBase, IRecordService
     {
-        public IActionResult Record()
+        private readonly IRecordService _recordService;
+
+
+        public RecordController(IRecordService recordService)
         {
-            return View();
+            _recordService = recordService;
+        }
+        //public IActionResult Record()
+        //{
+        //    return View();
+        //}
+
+        public void AddToRecord()
+        {
+            _recordService.AddToRecord();
         }
     }
 }
