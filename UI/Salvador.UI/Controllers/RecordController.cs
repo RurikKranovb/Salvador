@@ -1,9 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Salvador.Domain.Entities;
 using Salvador.Interface.Services;
 
 namespace Salvador.UI.Controllers
 {
-    public class RecordController : ControllerBase, IRecordService
+    public class RecordController : ControllerBase/*, IRecordService*/
     {
         private readonly IRecordService _recordService;
 
@@ -12,14 +13,15 @@ namespace Salvador.UI.Controllers
         {
             _recordService = recordService;
         }
-        //public IActionResult Record()
+
+        //public IEnumerable<Record> GetRecord()
         //{
-        //    return View();
+        //    throw new NotImplementedException();
         //}
 
-        public void AddToRecord()
-        {
-            _recordService.AddToRecord();
-        }
+        //public Task<Record> AddToRecord()
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }

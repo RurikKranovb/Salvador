@@ -1,7 +1,10 @@
-﻿namespace Salvador.Interface.Services
+﻿using Salvador.Domain.Entities;
+
+namespace Salvador.Interface.Services
 {
     public interface IRecordService
     {
-        void AddToRecord();
+        IEnumerable<Record> GetRecord();
+        Task<Record> AddToRecord();
     }
 }
