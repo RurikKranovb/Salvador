@@ -1,16 +1,31 @@
-﻿using Salvador.Interface.Services;
+﻿using Microsoft.EntityFrameworkCore;
+using Salvador.DAL.Context;
+using Salvador.Domain.Entities;
+using Salvador.Interface.Services;
 
 namespace Salvador.Service
 {
     public class RecordService : IRecordService
     {
-        public RecordService()
+        private readonly DataBase _db;
+
+        public RecordService(DataBase db)
         {
-            
+            _db = db;
         }
-        public void AddToRecord()
+
+        public IEnumerable<Record> GetRecord() => _db.Records.AsEnumerable();
+
+        public async Task<Record> AddToRecord()
         {
-            
+            await using var transaction = await _db.Database.BeginTransactionAsync();
+
+            var record = new Record()
+            {
+
+            };
+
+            return record;
         }
     }
 }

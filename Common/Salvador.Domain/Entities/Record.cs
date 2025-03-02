@@ -8,6 +8,5 @@ namespace Salvador.Domain.Entities
         public string Email { get; set; }
         public string Phone { get; set; }
         public DateTime DateTime { get; set; }
-        public TimeSpan Time { get; set; } 
     }
 }
