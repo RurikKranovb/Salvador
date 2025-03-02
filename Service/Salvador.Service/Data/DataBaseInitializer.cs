@@ -27,6 +27,9 @@ namespace Salvador.Service.Data
 
         private async Task InitializerTestDataAsync()
         {
+            if (await _dataBase.Records.AnyAsync())
+                return;
+
             var db = _dataBase.Database;
 
             await using var transaction = await db.BeginTransactionAsync().ConfigureAwait(false);
@@ -40,7 +43,6 @@ namespace Salvador.Service.Data
             await db.ExecuteSqlRawAsync("SET IDENTITY_INSERT [dbo].[Records] OFF");
 
             await transaction.CommitAsync().ConfigureAwait(false);
-
         }
     }
 
