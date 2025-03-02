@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Salvador.Domain.Entities;
+using Salvador.Domain.Models;
 using Salvador.Interface.Services;
 
 namespace Salvador.UI.Controllers
@@ -14,14 +15,10 @@ namespace Salvador.UI.Controllers
             _recordService = recordService;
         }
 
-        //public IEnumerable<Record> GetRecord()
-        //{
-        //    throw new NotImplementedException();
-        //}
-
-        //public Task<Record> AddToRecord()
-        //{
-        //    throw new NotImplementedException();
-        //}
+        public IActionResult Record(RecordModel model)
+        {
+            _recordService.AddToRecord(model);
+            return RedirectToAction(Url.Action("Index", "Home"));
+        }
     }
 }

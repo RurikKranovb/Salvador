@@ -1,10 +1,11 @@
 ﻿using Salvador.Domain.Entities;
+using Salvador.Domain.Models;
 
 namespace Salvador.Interface.Services
 {
     public interface IRecordService
     {
         IEnumerable<Record> GetRecord();
-        Task<Record> AddToRecord();
+        Task<bool> AddToRecord(RecordModel recordModel);
     }
 }
