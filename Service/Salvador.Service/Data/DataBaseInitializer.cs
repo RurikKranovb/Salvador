@@ -21,7 +21,6 @@ namespace Salvador.Service.Data
 
             await db.MigrateAsync().ConfigureAwait(false);
 
-
             await InitializerTestDataAsync().ConfigureAwait(false);
         }
 
