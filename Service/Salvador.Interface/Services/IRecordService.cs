@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Salvador.Domain.Entities;
+using Salvador.Domain.Models;
 
 namespace Salvador.Interface.Services
 {
     public interface IRecordService
     {
-        void AddToRecord();
+        IEnumerable<Record> GetRecord();
+        Task<bool> AddToRecord(RecordModel recordModel);
     }
 }

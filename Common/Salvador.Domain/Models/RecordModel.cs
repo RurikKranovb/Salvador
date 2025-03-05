@@ -1,8 +1,6 @@
-﻿using Salvador.Domain.Entities.Base;
-
-namespace Salvador.Domain.Entities
+﻿namespace Salvador.Domain.Models
 {
-    public class Record : BaseEntity
+    public class RecordModel
     {
         public string Name { get; set; }
         public string Email { get; set; }

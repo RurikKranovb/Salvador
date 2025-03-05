@@ -1,9 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Salvador.Domain.Entities;
+using Salvador.Domain.Models;
 using Salvador.Interface.Services;
 
 namespace Salvador.UI.Controllers
 {
-    public class RecordController : ControllerBase, IRecordService
+    public class RecordController : ControllerBase/*, IRecordService*/
     {
         private readonly IRecordService _recordService;
 
@@ -12,14 +14,11 @@ namespace Salvador.UI.Controllers
         {
             _recordService = recordService;
         }
-        //public IActionResult Record()
-        //{
-        //    return View();
-        //}
 
-        public void AddToRecord()
+        public IActionResult Record(RecordModel model)
         {
-            _recordService.AddToRecord();
+            _recordService.AddToRecord(model);
+            return RedirectToAction(Url.Action("Index", "Home"));
         }
     }
 }
