@@ -1,12 +1,13 @@
-﻿using Salvador.UI.Model;
+﻿using Salvador.Domain.Entities;
+using Salvador.UI.Model;
 
 namespace Salvador.UI.Infrastructure.Interface
 {
     public interface IRecordData
     {
-        IEnumerable<RecordItems> GetAll();
+        IEnumerable<Record> GetAll();
 
-        void Add(RecordItems record);
+        void Add(Record recordModel);
 
         void SaveChanges();
     }

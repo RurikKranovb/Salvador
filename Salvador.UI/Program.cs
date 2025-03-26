@@ -1,6 +1,8 @@
 
 using Microsoft.EntityFrameworkCore;
 using Salvador.DAL.Context;
+using Salvador.UI.Infrastructure.Interface;
+using Salvador.UI.Infrastructure.Service;
 
 namespace Salvador.UI
 {
@@ -18,6 +20,8 @@ namespace Salvador.UI
 
             // Add services to the container.
             builder.Services.AddRazorPages();
+
+            service.AddScoped<IRecordData, SqlRecordDate>();
 
             var app = builder.Build();
 

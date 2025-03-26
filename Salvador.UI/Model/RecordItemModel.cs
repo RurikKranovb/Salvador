@@ -1,6 +1,6 @@
 ﻿namespace Salvador.UI.Model
 {
-    public class RecordItem
+    public class RecordItemModel
     {
         public string Name { get; set; }
         public int Price { get; set; }

@@ -41,7 +41,7 @@ namespace Salvador.DAL.Migrations
                     b.Property<int?>("RecordItemId")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("TimeRecord")
+                    b.Property<DateTime>("StartDate")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");

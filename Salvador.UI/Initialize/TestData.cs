@@ -1,4 +1,5 @@
-﻿using Salvador.UI.Model;
+﻿using Salvador.Domain.Entities;
+using Salvador.UI.Model;
 
 namespace Salvador.UI.Initialize
 {
@@ -33,13 +34,14 @@ namespace Salvador.UI.Initialize
             },
         };
 
-        public static List<RecordItems> RecordItemsList { get; } = new()
+        public static List<Record> RecordItemsList { get; } = new()
         {
             new()
             {
                 Name = "Элеанора",
                 Phone = "89511745698",
-                TimeRecord = new DateTime(2025,03,05,19,20,00),
+                StartDate = new DateTime(2025,03,05,19,20,00),
+                EndDate = new DateTime(2025,03,05,19,20,00),
                 Items = new List<RecordItem>()
                 {
                     new()
@@ -60,7 +62,8 @@ namespace Salvador.UI.Initialize
             {
                 Name = "Василий",
                 Phone = "89536852297",
-                TimeRecord = new DateTime(2025,03,05,15,36,00),
+                StartDate = new DateTime(2025,03,05,15,36,00),
+                EndDate = new DateTime(2025,03,05,19,20,00),
                 Items = new List<RecordItem>()
                 {
                     new()
