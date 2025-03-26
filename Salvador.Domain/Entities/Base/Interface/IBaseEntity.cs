@@ -1,4 +1,4 @@
-﻿namespace Salvador.UI.Entities.Base.Interface
+﻿namespace Salvador.Domain.Entities.Base.Interface
 {
     public interface IBaseEntity
     {

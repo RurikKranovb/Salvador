@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using Salvador.UI.Entities.Base.Interface;
+using Salvador.Domain.Entities.Base.Interface;
 
-namespace Salvador.UI.Entities.Base
+namespace Salvador.Domain.Entities.Base
 {
     public abstract class BaseEntity : IBaseEntity
     {
