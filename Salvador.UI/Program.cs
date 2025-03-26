@@ -1,4 +1,7 @@
 
+using Microsoft.EntityFrameworkCore;
+using Salvador.DAL.Context;
+
 namespace Salvador.UI
 {
     public class Program
@@ -6,6 +9,12 @@ namespace Salvador.UI
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+            var service = builder.Services;
+
+            var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+
+            service.AddDbContext<SalvadorDataBase>(opt =>
+                opt.UseSqlServer(connectionString));
 
             // Add services to the container.
             builder.Services.AddRazorPages();

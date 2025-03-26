@@ -5,7 +5,6 @@ namespace Salvador.Domain.Entities
 {
     public class Record : DefaultEntity
     {
- 
         public string Phone { get; set; }
         public DateTime TimeRecord { get; set; }
 
