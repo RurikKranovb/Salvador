@@ -12,25 +12,25 @@ namespace Salvador.UI.Initialize
             {
                 Name = "Стрижка",
                 Price = 1111,
-                Date = TimeSpan.FromSeconds(3600)
+                WorkTime = TimeSpan.FromSeconds(3600)
             },
             new()
             {
                 Name = "Укладка",
                 Price = 2222,
-                Date = TimeSpan.FromSeconds(3600)
+                WorkTime = TimeSpan.FromSeconds(3600)
             },
             new()
             {
                 Name = "Мелирование",
                 Price = 3333,
-                Date = TimeSpan.FromSeconds(3600)
+                WorkTime = TimeSpan.FromSeconds(3600)
             },
             new()
             {
                 Name = "Окрашивание",
                 Price = 4444,
-                Date = TimeSpan.FromSeconds(3600)
+                WorkTime = TimeSpan.FromSeconds(3600)
             },
         };
 
@@ -48,13 +48,13 @@ namespace Salvador.UI.Initialize
                     {
                         Name = "Стрижка",
                         Price = 1111,
-                        Date = TimeSpan.FromSeconds(3600)
+                        WorkTime = TimeSpan.FromSeconds(3600)
                     },
                     new()
                     {
                         Name = "Укладка",
                         Price = 2222,
-                        Date = TimeSpan.FromSeconds(3600)
+                        WorkTime = TimeSpan.FromSeconds(3600)
                     },
                 }
             },
@@ -70,13 +70,13 @@ namespace Salvador.UI.Initialize
                     {
                         Name = "Стрижка",
                         Price = 1111,
-                        Date = TimeSpan.FromSeconds(3600)
+                        WorkTime = TimeSpan.FromSeconds(3600)
                     },
                     new()
                     {
                         Name = "Окрашивание",
                         Price = 4444,
-                        Date = TimeSpan.FromSeconds(3600)
+                        WorkTime = TimeSpan.FromSeconds(3600)
                     },
                 }
             }

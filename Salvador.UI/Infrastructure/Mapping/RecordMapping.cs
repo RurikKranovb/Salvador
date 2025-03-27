@@ -12,9 +12,14 @@ namespace Salvador.UI.Infrastructure.Mapping
             StartDate = items.StartDate,
             Name = items.Name,
             Price = items.Price,
-            EndDate = items.EndDate
-            
+            EndDate = items.EndDate,
+            Items = items.Items.Select(item => new RecordItemViewModel()
+            {
+                WorkTime = item.WorkTime,
+                Name = item.Name,
+                Price = item.Price,
+                Id = item.Id
+            }).ToList()
         };
-
     }
 }

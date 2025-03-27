@@ -22,7 +22,7 @@ namespace Salvador.UI.Infrastructure.Service
             recordModel.Id = _recordItemsList.Count == 0 ? 1 : _recordItemsList.Max(e => e.Id) + 1;
 
             //TODO: Сумма дат разница, время окончания
-            var endDate = _recordItemsList.Select(item => item.Items.Select(recordItem => recordItem.Date));
+            var endDate = _recordItemsList.Select(item => item.Items.Select(recordItem => recordItem.WorkTime));
             //recordModel.EndDate = 
             _recordItemsList.Add(recordModel);
 

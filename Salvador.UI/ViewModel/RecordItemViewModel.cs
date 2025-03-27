@@ -8,7 +8,6 @@ namespace Salvador.UI.ViewModel
         public int Id { get; set; }
         public string Name { get; set; }
         public decimal Price { get; set; }
-        public DateTime StartDate { get; set; } = DateTime.Now;
-        public TimeSpan EndDate { get; set; } 
+        public TimeSpan WorkTime { get; set; } 
     }
 }
