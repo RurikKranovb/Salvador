@@ -21,7 +21,7 @@ namespace Salvador.UI.Controllers
             return View(item);
         }
 
-        public void Record(RecordViewModel time)
+        public void Record(RecordItemViewModel time)
         {
 
         
