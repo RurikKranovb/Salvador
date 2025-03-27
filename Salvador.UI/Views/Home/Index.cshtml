@@ -9,9 +9,13 @@
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
     
     <form method="post" asp-controller="Home" asp-action="Record" asp-route-id="@Model">
-        @* <input type="datetime" value="@Model.StartDate" /> *@
+         @* <input type="datetime" value="@Model.StartDate" />  *@
         <button type="submit"  class="btn btn-default">Вход</button>
     </form>
+    <form id="form1" runat="server">
 
+		<partial name="Partial/_Calendar"/>
+            
+    </form>
     <a asp-controller="Home" asp-action="Record">123</a>
 </div>
